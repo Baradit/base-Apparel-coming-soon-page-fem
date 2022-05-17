@@ -13,6 +13,12 @@
 
     <title>Frontend Mentor | Base Apparel coming soon page</title>
 
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
@@ -32,16 +38,24 @@
             store. Add your email below to stay up-to-date with announcements
             and our launch deals.
           </div>
-          <form action="" class="hero__subscribe">
+          <form action="" class="hero__subscribe" id="hero__subscribe">
             <input
-              type="search"
+              type="email"
               placeholder="Email Address"
               class="hero__subscribe-input"
+              id="email"
             />
-            <button class="hero__subscribe-button button">
+            <div class="error-icon hidden" id="error-icon">
+              <img class="" src="assets/images/icon-error.svg" alt="" />
+            </div>
+            <div class="correct-icon hidden" id="correct-icon">
+              <i class="bx bxs-check-circle"></i>
+            </div>
+            <button type="submit" class="hero__subscribe-button button">
               <img src="assets/images/icon-arrow.svg" alt="" />
             </button>
           </form>
+          <span id="error-text"></span>
         </div>
       </section>
     </main>

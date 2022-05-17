@@ -137,11 +137,20 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.4s;
 }
 
 .hero__subscribe-input {
-  width: 75%;
-  margin: 0 2rem;
+  width: 60%;
+  margin: 0 1rem 0 2rem;
+}
+
+.error-icon,
+.correct-icon {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__subscribe input::placeholder {
@@ -156,4 +165,32 @@ button {
     hsl(0, 74%, 74%) 0px 0px 0px 1px;
   padding: 0.7rem;
   border-radius: 3rem;
+  cursor: pointer;
+}
+
+/* Validation */
+
+.form-error {
+  border: 1px solid red;
+}
+
+.form-correct {
+  border: 1px solid green;
+}
+
+.bxs-check-circle {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
+#error-text {
+  color: red;
+  margin-top: 0.5rem;
+  display: flex;
+  padding-left: 2rem;
+  font-size: var(--smaller-font-size);
 }
