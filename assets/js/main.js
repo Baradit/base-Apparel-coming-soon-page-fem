@@ -1,5 +1,4 @@
 const email = document.getElementById("email");
-console.log(email);
 const errorText = document.getElementById("error-text");
 const form = document.getElementById("hero__subscribe");
 const errorIcon = document.getElementById("error-icon");
@@ -9,7 +8,6 @@ const emailPattern =
 
 email.addEventListener("blur", (e) => {
   if (email.value.match(emailPattern)) {
-    console.log("correo correcto");
     form.classList.add("form-correct");
     form.classList.remove("form-error");
     errorIcon.classList.add("hidden");
@@ -17,7 +15,6 @@ email.addEventListener("blur", (e) => {
     errorText.textContent = "";
   } else {
     e.preventDefault();
-    console.log("mala");
     form.classList.remove("form-correct");
     form.classList.add("form-error");
     errorIcon.classList.remove("hidden");
